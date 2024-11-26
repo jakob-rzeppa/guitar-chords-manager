@@ -117,6 +117,7 @@ It can transpose chords and display the most important information of a song.
                     "name": "Perfect",
                     "artist": "Ed Sheeran",
                     "capo": "1",
+                    "key": "Ab",
                     "uploaded_at": "2024-08-05T08:40:51.620Z"
                 },
                 {
@@ -125,6 +126,7 @@ It can transpose chords and display the most important information of a song.
                     "name": "Memories",
                     "artist": "Dean Lewis",
                     "capo": "7",
+                    "key": "B",
                     "uploaded_at": "2023-08-05T08:40:51.620Z"
                 },
                 {
@@ -133,6 +135,7 @@ It can transpose chords and display the most important information of a song.
                     "name": "Take Me Home Country Roads",
                     "artist": "John Denver",
                     "capo": "2",
+                    "key": "G",
                     "uploaded_at": "2022-08-05T08:40:51.620Z"
                 }
             ]
@@ -155,7 +158,7 @@ It can transpose chords and display the most important information of a song.
             "key": "Ab",
             "capo": "1",
             "uploaded_at": "2024-08-05T08:40:51.620Z",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
         
 ### CREATE a New Tab [POST]
@@ -166,7 +169,7 @@ It can transpose chords and display the most important information of a song.
             "name": "Perfect",
             "artist": "Ed Sheeran",
             "capo": "1",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
 + Response 201 (application/json)
@@ -179,7 +182,7 @@ It can transpose chords and display the most important information of a song.
             "key": "Ab",
             "capo": "1",
             "uploaded_at": "2024-08-05T08:40:51.620Z",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
             
 ### UPDATE a Tab [PUT /guitar-tabs/{id}]
@@ -195,7 +198,7 @@ It can transpose chords and display the most important information of a song.
             "artist": "Ed Sheeran",
             "key": "Ab",
             "capo": "1",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
 + Response 200 (application/json)
@@ -208,7 +211,7 @@ It can transpose chords and display the most important information of a song.
             "key": "Ab",
             "capo": "1",
             "uploaded_at": "2024-08-05T08:40:51.620Z",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
 ### DELETE a Tab [DELETE /guitar-tabs/{id}]
@@ -219,7 +222,7 @@ It can transpose chords and display the most important information of a song.
 
 + Response 201 (application/json)
 
-## Transpose Tabs [/guitar-tabs/{id}/transpose/{steps}]
+## Change Capo [/guitar-tabs/{id}/capo/{capo}]
 
 + Parameter 
 
@@ -227,7 +230,7 @@ It can transpose chords and display the most important information of a song.
     
 + Parameter 
 
-    + steps: 2 (number) - the number of steps to transpose
+    + capo: 2 (number) - the fret to put the capo on
 
 ### TRANSPOSE a Tab [GET]
 
@@ -236,7 +239,7 @@ It can transpose chords and display the most important information of a song.
         {
             "key": "Ab",
             "capo": "1",
-            "tab": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "tab": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
 ### TRANSPOSE and UPDATE a Tab [PUT]
@@ -252,5 +255,5 @@ It can transpose chords and display the most important information of a song.
             "key": "Ab",
             "capo": "1",
             "uploaded_at": "2024-08-05T08:40:51.620Z",
-            "content": "[Verse 1]\n\n          G        Em\n\nI found a love for me\n\n              C                            D\n\nDarling, just dive right in, and follow my lead\n\n                G          Em\n\nWell, I found a girl beautiful and sweet\n\n        C                                     D\n\nI never knew you were the someone waiting for me"
+            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
