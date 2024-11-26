@@ -4,7 +4,7 @@ A management tool for guitar chord sheets. It can transpose chords and display t
 
 ## Docs
 
-See documentation at https://guitartabs.docs.apiary.io
+See documentation at <https://guitartabs.docs.apiary.io>
 
 ## features
 
