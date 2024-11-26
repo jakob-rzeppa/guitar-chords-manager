@@ -6,6 +6,101 @@ HOST: https://localhost:3060
 A API for managing guitar chord sheets. 
 It can transpose chords and display the most important information of a song.
 
+# Group Users
+
+## Authentication [/auth]
+
+### Login [POST /auth/login]
+
++ Request (application/json)
+
+        {
+            "email": "example@example.com",
+            "password": "examplePassword"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "access_token": "",
+            "refresh_token": ""
+        }
+
+### Refresh Token [PUT /auth/refresh-token]
+
++ Request (application/json)
+
+        {
+            "refresh_token": "",
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "access_token": "",
+        }
+
+### Logout [DELETE /auth/logout]
+
++ Request (application/json)
+
+        {
+            "refresh_token": "",
+        }
+
++ Response 201
+
+## Users [/auth/users]
+
+### GET user information [GET]
+
++ Response 200 (application/json)
+
+        {
+            "name": "Peter",
+            "email": "peter@example.com",
+            "role": "user"
+        }
+
+### Register [POST]
+
++ Request (application/json)
+
+        {
+            "name": "Peter",
+            "email": "peter@example.com",
+            "password": "examplePassword"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "access_token": "",
+            "refresh_token": ""
+        }
+        
+### UPDATE user information [PUT]
+
++ Request (application/json)
+
+        {
+            "name": "Peter",
+            "email": "peter@example.com",
+            "password": "password"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "name": "Peter",
+            "email": "peter@example.com",
+            "role": "user"
+        }
+        
+### DELETE user [DELETE]
+
++ Response 201
+
 # Group Guitar Tabs
 
 ## General Endpoints [/guitar-tabs]
