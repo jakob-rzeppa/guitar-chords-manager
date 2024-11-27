@@ -85,17 +85,21 @@ It can transpose chords and display the most important information of a song.
 
         {
             "name": "Peter",
-            "email": "peter@example.com",
-            "password": "password"
+            "email": "peter@example.com"
         }
 
-+ Response 200 (application/json)
++ Response 201
+
+### UPDATE user password [PUT]
+
++ Request (application/json)
 
         {
-            "name": "Peter",
-            "email": "peter@example.com",
-            "role": "user"
+            "oldPassword": "exampleOldPassword",
+            "newPassword": "exampleNewPassword"
         }
+        
++ Response 201
         
 ### DELETE user [DELETE]
 
