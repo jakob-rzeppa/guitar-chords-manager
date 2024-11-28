@@ -120,6 +120,7 @@ It can transpose chords and display the most important information of a song.
                     "user_id": "67457995b91df366534054d4",
                     "name": "Perfect",
                     "artist": "Ed Sheeran",
+                    "tags": ["Love", "Pop"],
                     "capo": "1",
                     "key": "Ab",
                     "uploaded_at": "2024-08-05T08:40:51.620Z"
@@ -129,6 +130,7 @@ It can transpose chords and display the most important information of a song.
                     "user_id": "67457995b91df366534054d4",
                     "name": "Memories",
                     "artist": "Dean Lewis",
+                    "tags": ["Love", "Sad"],
                     "capo": "7",
                     "key": "B",
                     "uploaded_at": "2023-08-05T08:40:51.620Z"
@@ -138,6 +140,7 @@ It can transpose chords and display the most important information of a song.
                     "user_id": "67457995b91df366534054d4",
                     "name": "Take Me Home Country Roads",
                     "artist": "John Denver",
+                    "tags": ["Country"],
                     "capo": "2",
                     "key": "G",
                     "uploaded_at": "2022-08-05T08:40:51.620Z"
@@ -159,6 +162,7 @@ It can transpose chords and display the most important information of a song.
             "user_id": "67457995b91df366534054d4",
             "name": "Perfect",
             "artist": "Ed Sheeran",
+            "tags": ["Love", "Pop"],
             "key": "Ab",
             "capo": "1",
             "uploaded_at": "2024-08-05T08:40:51.620Z",
@@ -172,12 +176,13 @@ It can transpose chords and display the most important information of a song.
         {
             "name": "Perfect",
             "artist": "Ed Sheeran",
+            "tags": ["Love", "Pop"],
             "key": "Ab",
             "capo": "1",
             "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
         {
             "id": "67457974c101e604fda43c64"
@@ -194,23 +199,13 @@ It can transpose chords and display the most important information of a song.
         {
             "name": "Perfect",
             "artist": "Ed Sheeran",
+            "tags": ["Love", "Pop"],
             "key": "Ab",
             "capo": "1",
             "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
         }
 
-+ Response 200 (application/json)
-
-        {
-            "id": "67457974c101e604fda43c64",
-            "user_id": "67457995b91df366534054d4",
-            "name": "Perfect",
-            "artist": "Ed Sheeran",
-            "key": "Ab",
-            "capo": "1",
-            "uploaded_at": "2024-08-05T08:40:51.620Z",
-            "content": "[Verse 1]\n          G        Em\nI found a love for me\n              C                            D\nDarling, just dive right in, and follow my lead\n                G          Em\nWell, I found a girl beautiful and sweet\n        C                                     D\nI never knew you were the someone waiting for me"
-        }
++ Response 201
 
 ### DELETE a Tab [DELETE /guitar-tabs/{id}]
 
