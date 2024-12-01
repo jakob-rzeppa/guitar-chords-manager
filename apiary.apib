@@ -22,8 +22,8 @@ It can transpose chords and display the most important information of a song.
 + Response 200 (application/json)
 
         {
-            "access_token": "",
-            "refresh_token": ""
+            "access_token": "exampleAccessToken",
+            "refresh_token": "exampleRefreshToken"
         }
 
 ### Refresh Token [PUT /auth/refresh-token]
@@ -31,13 +31,13 @@ It can transpose chords and display the most important information of a song.
 + Request (application/json)
 
         {
-            "refresh_token": "",
+            "refresh_token": "exampleRefreshToken",
         }
         
 + Response 200 (application/json)
 
         {
-            "access_token": "",
+            "access_token": "exampleAccessToken",
         }
 
 ### Logout [DELETE /auth/logout]
@@ -45,7 +45,7 @@ It can transpose chords and display the most important information of a song.
 + Request (application/json)
 
         {
-            "refresh_token": "",
+            "refresh_token": "exampleRefreshToken",
         }
 
 + Response 201
